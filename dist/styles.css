@@ -102,6 +102,7 @@ h1 { margin: 0; max-width: 650px; font-family: var(--serif-hand); font-size: cla
 .punctuation { font-family: var(--serif-hand); font-size: clamp(3.3rem, 7vw, 6.2rem); letter-spacing: -.18em; transform: rotate(-3deg); }
 .punctuation i { color: var(--yellow); font-style: normal; }
 .book-card .project-visual { background: #e9c4a3; }
+.book-icon { display: block; width: 160px; height: 160px; object-fit: contain; }
 .book-shape { width: 68%; height: 66%; position: relative; display: flex; filter: drop-shadow(10px 12px 0 rgba(62,92,118,.45)); }
 .book-shape::after { content: ""; position: absolute; left: 50%; top: 4%; bottom: 4%; width: 2px; background: var(--ink); transform: translateX(-50%); }
 .book-shape i { flex: 1; background: var(--paper); border: 2px solid var(--ink); }
