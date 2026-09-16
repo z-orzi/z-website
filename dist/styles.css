@@ -76,6 +76,11 @@ h1 { margin: 0; max-width: 650px; font-family: var(--serif-hand); font-size: cla
 .project-card[hidden] { display: none; }
 .project-visual { height: 230px; border-bottom: 1.5px solid var(--ink); position: relative; overflow: hidden; display: grid; place-items: center; }
 .project-visual b { position: absolute; right: 16px; top: 12px; font-size: .72rem; border: 1px solid currentColor; border-radius: 99px; padding: 3px 7px; }
+.project-cover { display: block; width: 100%; height: 100%; object-fit: contain; background: var(--cream); }
+.project-links { display: flex; gap: 16px; flex-wrap: wrap; margin-top: 20px; font-size: .9rem; color: var(--blue); }
+.project-links a { text-underline-offset: 4px; }
+.itch-card .project-visual { background: #fa5c5c; color: white; }
+.itch-wordmark { font-size: 4rem; font-weight: 700; letter-spacing: -.05em; }
 .fish-card .project-visual { background: #bbd8dc; }
 .fish { font-size: 5.5rem; line-height: 1; color: var(--blue); transform: rotate(-5deg); }
 .fish i { font-style: normal; display: inline-block; font-size: .85em; margin-left: -.26em; }

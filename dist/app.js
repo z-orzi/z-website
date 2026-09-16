@@ -10,7 +10,7 @@ const translations = {
     released: "已发布", building: "制作中", archived: "已归档", empty: "这个阶段暂时没有作品。",
     stripHand: "Still building, still curious.", aboutTitle: "我来自语言与人文学科，<br>现在也用AI做东西。",
     aboutBody: "我喜欢那些基于日常痛点出发或有趣的想法。翻译教会我保持开放包容,AI帮助我跨过技术门槛。",
-    footerPrompt: "想聊聊小项目，或只是交换一个有趣的想法："
+    footerPrompt: "想聊聊小项目，或只是交换一个有趣的想法：", bookWebsite: "官网"
   },
   en: {
     skip: "Skip to projects", navHome: "Home", navProjects: "Projects", navAbout: "About", contact: "Get in touch",
@@ -23,7 +23,7 @@ const translations = {
     released: "Released", building: "Building", archived: "Archived", empty: "No projects at this stage yet.",
     stripHand: "Still building, still curious.", aboutTitle: "I come from language and humanities.<br>Now I build things with AI.",
     aboutBody: "I like ideas that grow from everyday pain points or simple curiosity. Translation taught me to stay open and inclusive, and AI helps me cross technical barriers.",
-    footerPrompt: "For a small project, or just to trade an interesting idea:"
+    footerPrompt: "For a small project, or just to trade an interesting idea:", bookWebsite: "Website"
   }
 };
 
