@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f6ce45">
+  <meta name="description" content="z 的个人作品集：游戏、工具与数字实验。">
+  <title>z. — Small ideas, Brighter days.</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Ma+Shan+Zheng&family=Noto+Sans+SC:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='18' fill='%23F6CE45'/%3E%3Cpath d='M17 22h31L22 45h27' fill='none' stroke='%2326241f' stroke-width='7' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#projects" data-i18n="skip">跳到作品</a>
+
+  <header class="site-header" aria-label="主导航">
+    <a class="brand" href="#home" aria-label="z 首页"><span>z.</span></a>
+    <nav class="nav-links" aria-label="页面导航">
+      <a href="#home" data-i18n="navHome">首页</a>
+      <a href="#projects" data-i18n="navProjects">作品</a>
+      <a href="#about" data-i18n="navAbout">关于</a>
+    </nav>
+    <div class="header-actions">
+      <button class="language-toggle" type="button" aria-label="Switch language"><span class="lang-active">中</span><span aria-hidden="true">/</span><span>EN</span></button>
+      <a class="contact-pill" href="#contact" data-i18n="contact">联系我</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-copy">
+        <div class="maker-note" aria-label="Creative technologist, in progress">
+          <span>Creative technologist</span>
+          <span class="live-note"><i></i>in progress</span>
+        </div>
+        <h1 data-i18n="heroTitle">Small ideas,<br>Brighter days.</h1>
+        <p class="hero-cn" data-i18n="heroCn">我把乱码，翻译成作品。</p>
+        <p class="hero-body" data-i18n="heroBody">用翻译的敏感和一点点代码，把生活里卡住我的地方，做成可以玩的游戏和真正好用的小工具。</p>
+        <a class="explore-link" href="#projects"><span data-i18n="explore">去看作品</span><b aria-hidden="true">↓</b></a>
+      </div>
+      <figure class="workspace-figure">
+        <div class="tape tape-one"></div>
+        <img src="assets/creative-workbench.png" alt="阳光下的创作工作台，摆着电脑、书、陶瓷鱼和一只睡着的猫" width="1536" height="1024">
+        <figcaption data-i18n="figureCaption">今天的工作台：一盏灯、一些草稿，猫负责监督。</figcaption>
+      </figure>
+    </section>
+
+    <section class="currently" aria-labelledby="currently-title">
+      <h2 id="currently-title">Currently</h2>
+      <ul>
+        <li data-i18n="currentOne">在做一个点击解谜小游戏</li>
+        <li data-i18n="currentTwo">整理可复用的 Game Jam 模块</li>
+        <li data-i18n="currentThree">继续学着把想法做小、做完</li>
+      </ul>
+      <span class="cat-mark" aria-label="cat">=＾● ⋏ ●＾=</span>
+    </section>
+
+    <section class="projects-section" id="projects">
+      <div class="section-heading">
+        <div>
+          <p class="scribble" data-i18n="projectsNote">做出来，比想明白更接近答案</p>
+          <h2 data-i18n="projectsTitle">作品与实验 <span aria-hidden="true">✦</span></h2>
+          <p data-i18n="projectsIntro">它们处在不同阶段，但都从一个真实的小问题开始。</p>
+        </div>
+        <p class="decode-hint"><span aria-hidden="true">↘</span> <span data-i18n="decodeHint">把鼠标放上去，帮我翻译一下</span></p>
+      </div>
+
+      <div class="filters" role="group" aria-label="作品筛选">
+        <button class="filter is-active" data-filter="all" type="button" data-i18n="filterAll">全部</button>
+        <button class="filter" data-filter="building" type="button" data-i18n="filterBuilding">制作中</button>
+        <button class="filter" data-filter="released" type="button" data-i18n="filterReleased">已发布</button>
+        <button class="filter" data-filter="archived" type="button" data-i18n="filterArchived">已归档</button>
+      </div>
+
+      <div class="project-grid">
+        <article class="project-card fish-card" tabindex="0" data-status="released" data-zh-title="Ceramic Fish Studio" data-en-title="Ceramic Fish Studio" data-zh-description="一场关于收集、照顾与欣赏陶瓷鱼的小型互动体验。" data-en-description="A tiny interactive experience about collecting and caring for ceramic fish.">
+          <div class="project-visual" aria-hidden="true"><span class="fish">◉<i>◁</i></span><span class="bubble">○　·　°</span><b>01</b></div>
+          <div class="project-content">
+            <span class="status released" data-i18n="released">已发布</span>
+            <h3 class="decode-title"></h3>
+            <p class="decode-description"></p>
+            <div class="card-foot"><ul><li>Web</li><li>Mini Game</li><li>Creative</li></ul><span class="round-arrow" aria-hidden="true">↗</span></div>
+          </div>
+        </article>
+
+        <article class="project-card editor-card" tabindex="0" data-status="building" data-zh-title="Ren'Py Plus 可视化编辑器" data-en-title="Ren'Py Plus Visual Editor" data-zh-description="把视觉小说里反复又容易出错的编辑步骤，变成更直观的工作流。" data-en-description="A visual workflow for the repetitive, error-prone parts of making a visual novel.">
+          <div class="project-visual" aria-hidden="true"><span class="window"><i></i><i></i><i></i></span><b>02</b></div>
+          <div class="project-content">
+            <span class="status building" data-i18n="building">制作中</span>
+            <h3 class="decode-title"></h3>
+            <p class="decode-description"></p>
+            <div class="card-foot"><ul><li>Editor</li><li>Game Dev</li><li>UX</li></ul><span class="round-arrow" aria-hidden="true">↗</span></div>
+          </div>
+        </article>
+
+        <article class="project-card folder-card" tabindex="0" data-status="archived" data-zh-title="文件夹颜色修改器" data-en-title="Folder Color Changer" data-zh-description="一个给 Windows 文件夹换颜色的小工具，让混乱的目录更容易辨认。" data-en-description="A small Windows tool that makes crowded folders easier to recognize by color.">
+          <div class="project-visual" aria-hidden="true"><span class="folders"><i></i><i></i><i></i></span><b>03</b></div>
+          <div class="project-content">
+            <span class="status archived" data-i18n="archived">已归档</span>
+            <h3 class="decode-title"></h3>
+            <p class="decode-description"></p>
+            <div class="card-foot"><ul><li>Windows</li><li>Utility</li><li>C#</li></ul><span class="round-arrow" aria-hidden="true">↗</span></div>
+          </div>
+        </article>
+
+        <article class="project-card punct-card" tabindex="0" data-status="archived" data-zh-title="PunctFixer" data-en-title="PunctFixer" data-zh-description="自动整理中英文之间的标点与空格，把校对里的小麻烦交给脚本。" data-en-description="A script that tidies punctuation and spacing between Chinese and English text.">
+          <div class="project-visual" aria-hidden="true"><span class="punctuation">，。<i>“ ”</i>？！</span><b>04</b></div>
+          <div class="project-content">
+            <span class="status archived" data-i18n="archived">已归档</span>
+            <h3 class="decode-title"></h3>
+            <p class="decode-description"></p>
+            <div class="card-foot"><ul><li>Python</li><li>Writing</li><li>Tool</li></ul><span class="round-arrow" aria-hidden="true">↗</span></div>
+          </div>
+        </article>
+      </div>
+      <p class="empty-state" hidden data-i18n="empty">这个阶段暂时没有作品。</p>
+    </section>
+
+    <section class="about-strip" id="about">
+      <p class="strip-hand" data-i18n="stripHand">Still building, still curious.</p>
+      <div>
+        <h2 data-i18n="aboutTitle">我来自语言与人文学科，<br>现在也用代码做东西。</h2>
+        <p data-i18n="aboutBody">我喜欢那些规模不大、但能让日常顺一点或有趣一点的想法。翻译教会我留意语境，做产品则让我把这种留意变成可以触碰的东西。</p>
+      </div>
+      <span class="little-star" aria-hidden="true">✦</span>
+    </section>
+  </main>
+
+  <footer id="contact">
+    <div class="footer-mark"><span>z.</span><p data-i18n="footerLine">把小想法做成亮一点的日子。</p></div>
+    <div class="footer-contact">
+      <p data-i18n="footerPrompt">想聊聊小项目，或只是交换一个有趣的想法：</p>
+      <a href="mailto:hello@example.com">hello@example.com</a>
+    </div>
+    <p class="copyright">© 2026 z. <span data-i18n="madeWith">在好奇心还没用完之前持续更新。</span></p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
