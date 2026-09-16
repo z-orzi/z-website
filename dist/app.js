@@ -1,31 +1,29 @@
 const translations = {
   zh: {
     skip: "跳到作品", navHome: "首页", navProjects: "作品", navAbout: "关于", contact: "联系我",
-    heroTitle: "Small ideas,<br>Brighter days.", heroCn: "我把乱码，翻译成作品。",
-    heroBody: "用翻译的敏感和一点点代码，把生活里卡住我的地方，做成可以玩的游戏和真正好用的小工具。",
-    explore: "去看作品", figureCaption: "今天的工作台：一盏灯、一些草稿，猫负责监督。",
-    currentOne: "在做一个点击解谜小游戏", currentTwo: "整理可复用的 Game Jam 模块", currentThree: "继续学着把想法做小、做完",
-    projectsNote: "做出来，比想明白更接近答案", projectsTitle: "作品与实验 <span aria-hidden=\"true\">✦</span>",
-    projectsIntro: "它们处在不同阶段，但都从一个真实的小问题开始。", decodeHint: "把鼠标放上去，帮我翻译一下",
+    heroTitle: "Ideas to realities.",
+    heroBody: "我来自人文社科,但也不畏惧技术。AI是帮助我实现想法的工具。",
+    explore: "去看作品",
+    currentOne: "在做一个点击解谜小游戏", currentTwo: "在简化RENPY的使用方式，尽可能逼近无代码，把它做成可视化编辑器", currentThree: "准备几场比赛！",
+    decodeHint: "把鼠标放上去，查看具体内容",
     filterAll: "全部", filterBuilding: "制作中", filterReleased: "已发布", filterArchived: "已归档",
     released: "已发布", building: "制作中", archived: "已归档", empty: "这个阶段暂时没有作品。",
-    stripHand: "Still building, still curious.", aboutTitle: "我来自语言与人文学科，<br>现在也用代码做东西。",
-    aboutBody: "我喜欢那些规模不大、但能让日常顺一点或有趣一点的想法。翻译教会我留意语境，做产品则让我把这种留意变成可以触碰的东西。",
-    footerLine: "把小想法做成亮一点的日子。", footerPrompt: "想聊聊小项目，或只是交换一个有趣的想法：", madeWith: "在好奇心还没用完之前持续更新。"
+    stripHand: "Still building, still curious.", aboutTitle: "我来自语言与人文学科，<br>现在也用AI做东西。",
+    aboutBody: "我喜欢那些基于日常痛点出发或有趣的想法。翻译教会我保持开放包容,AI帮助我跨过技术门槛。",
+    footerPrompt: "想聊聊小项目，或只是交换一个有趣的想法："
   },
   en: {
     skip: "Skip to projects", navHome: "Home", navProjects: "Projects", navAbout: "About", contact: "Get in touch",
-    heroTitle: "Small ideas,<br>Brighter days.", heroCn: "I translate glitches into things.",
-    heroBody: "With a translator's eye and a little code, I turn everyday friction into small games, useful tools, and digital experiments.",
-    explore: "Explore my work", figureCaption: "Today's desk: one lamp, a few drafts, and a cat on quality control.",
-    currentOne: "Building a click-to-solve game", currentTwo: "Preparing reusable Game Jam modules", currentThree: "Learning to make ideas smaller — and finish them",
-    projectsNote: "Making it gets me closer than overthinking it", projectsTitle: "Projects & experiments <span aria-hidden=\"true\">✦</span>",
-    projectsIntro: "Different stages, same curiosity — each one began with a small, real problem.", decodeHint: "Hover over a card to help me translate it",
+    heroTitle: "Ideas to realities.",
+    heroBody: "Trained in the humanities, unafraid of tech. I use AI as a tool to make my ideas real.",
+    explore: "Explore my work",
+    currentOne: "Building a click-to-solve game", currentTwo: "Simplifying RENPY and bringing it as close to no-code as possible by turning it into a visual editor", currentThree: "Getting ready for a few competitions!",
+    decodeHint: "Hover over a card to help me translate it",
     filterAll: "All", filterBuilding: "Building", filterReleased: "Released", filterArchived: "Archived",
     released: "Released", building: "Building", archived: "Archived", empty: "No projects at this stage yet.",
-    stripHand: "Still building, still curious.", aboutTitle: "I come from language and humanities.<br>Now I build things with code, too.",
-    aboutBody: "I like ideas that are small enough to hold, but useful enough to make an ordinary day smoother or more playful. Translation taught me to notice context; making products lets me turn that attention into something tangible.",
-    footerLine: "Turning small ideas into slightly brighter days.", footerPrompt: "For a small project, or just to trade an interesting idea:", madeWith: "Updated while curiosity lasts."
+    stripHand: "Still building, still curious.", aboutTitle: "I come from language and humanities.<br>Now I build things with AI.",
+    aboutBody: "I like ideas that grow from everyday pain points or simple curiosity. Translation taught me to stay open and inclusive, and AI helps me cross technical barriers.",
+    footerPrompt: "For a small project, or just to trade an interesting idea:"
   }
 };
 

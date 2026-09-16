@@ -4,8 +4,8 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#f6ce45">
-  <meta name="description" content="z 的个人作品集：游戏、工具与数字实验。">
-  <title>z. — Small ideas, Brighter days.</title>
+  <meta name="description" content="z 的个人作品集：游戏、工具和好玩的。">
+  <title>z. — 只有一种投资是稳赚不赔的,那就是学习</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Ma+Shan+Zheng&family=Noto+Sans+SC:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -31,19 +31,16 @@
   <main>
     <section class="hero" id="home">
       <div class="hero-copy">
-        <div class="maker-note" aria-label="Creative technologist, in progress">
-          <span>Creative technologist</span>
-          <span class="live-note"><i></i>in progress</span>
+        <div class="maker-note" aria-label="Creative Indie Developer；Major in Translations">
+          <span>Creative Indie Developer；Major in Translations</span>
         </div>
-        <h1 data-i18n="heroTitle">Small ideas,<br>Brighter days.</h1>
-        <p class="hero-cn" data-i18n="heroCn">我把乱码，翻译成作品。</p>
-        <p class="hero-body" data-i18n="heroBody">用翻译的敏感和一点点代码，把生活里卡住我的地方，做成可以玩的游戏和真正好用的小工具。</p>
+        <h1 data-i18n="heroTitle">Ideas to realities.</h1>
+        <p class="hero-body" data-i18n="heroBody">我来自人文社科,但也不畏惧技术。AI是帮助我实现想法的工具。</p>
         <a class="explore-link" href="#projects"><span data-i18n="explore">去看作品</span><b aria-hidden="true">↓</b></a>
       </div>
       <figure class="workspace-figure">
         <div class="tape tape-one"></div>
         <img src="assets/creative-workbench.png" alt="阳光下的创作工作台，摆着电脑、书、陶瓷鱼和一只睡着的猫" width="1536" height="1024">
-        <figcaption data-i18n="figureCaption">今天的工作台：一盏灯、一些草稿，猫负责监督。</figcaption>
       </figure>
     </section>
 
@@ -51,20 +48,15 @@
       <h2 id="currently-title">Currently</h2>
       <ul>
         <li data-i18n="currentOne">在做一个点击解谜小游戏</li>
-        <li data-i18n="currentTwo">整理可复用的 Game Jam 模块</li>
-        <li data-i18n="currentThree">继续学着把想法做小、做完</li>
+        <li data-i18n="currentTwo">在简化RENPY的使用方式，尽可能逼近无代码，把它做成可视化编辑器</li>
+        <li data-i18n="currentThree">准备几场比赛！</li>
       </ul>
       <span class="cat-mark" aria-label="cat">=＾● ⋏ ●＾=</span>
     </section>
 
     <section class="projects-section" id="projects">
       <div class="section-heading">
-        <div>
-          <p class="scribble" data-i18n="projectsNote">做出来，比想明白更接近答案</p>
-          <h2 data-i18n="projectsTitle">作品与实验 <span aria-hidden="true">✦</span></h2>
-          <p data-i18n="projectsIntro">它们处在不同阶段，但都从一个真实的小问题开始。</p>
-        </div>
-        <p class="decode-hint"><span aria-hidden="true">↘</span> <span data-i18n="decodeHint">把鼠标放上去，帮我翻译一下</span></p>
+        <p class="decode-hint"><span aria-hidden="true">↘</span> <span data-i18n="decodeHint">把鼠标放上去，查看具体内容</span></p>
       </div>
 
       <div class="filters" role="group" aria-label="作品筛选">
@@ -75,7 +67,7 @@
       </div>
 
       <div class="project-grid">
-        <article class="project-card fish-card" tabindex="0" data-status="released" data-zh-title="Ceramic Fish Studio" data-en-title="Ceramic Fish Studio" data-zh-description="一场关于收集、照顾与欣赏陶瓷鱼的小型互动体验。" data-en-description="A tiny interactive experience about collecting and caring for ceramic fish.">
+        <a class="project-card fish-card" href="https://mindyorzi.itch.io/clayfish-studio" target="_blank" rel="noreferrer" data-status="released" data-zh-title="陶瓷鱼坊" data-en-title="Ceramic Fish Studio" data-zh-description="制作属于自己的陶瓷小鱼！" data-en-description="Make your own ceramic fish!">
           <div class="project-visual" aria-hidden="true"><span class="fish">◉<i>◁</i></span><span class="bubble">○　·　°</span><b>01</b></div>
           <div class="project-content">
             <span class="status released" data-i18n="released">已发布</span>
@@ -83,7 +75,7 @@
             <p class="decode-description"></p>
             <div class="card-foot"><ul><li>Web</li><li>Mini Game</li><li>Creative</li></ul><span class="round-arrow" aria-hidden="true">↗</span></div>
           </div>
-        </article>
+        </a>
 
         <article class="project-card editor-card" tabindex="0" data-status="building" data-zh-title="Ren'Py Plus 可视化编辑器" data-en-title="Ren'Py Plus Visual Editor" data-zh-description="把视觉小说里反复又容易出错的编辑步骤，变成更直观的工作流。" data-en-description="A visual workflow for the repetitive, error-prone parts of making a visual novel.">
           <div class="project-visual" aria-hidden="true"><span class="window"><i></i><i></i><i></i></span><b>02</b></div>
@@ -114,6 +106,15 @@
             <div class="card-foot"><ul><li>Python</li><li>Writing</li><li>Tool</li></ul><span class="round-arrow" aria-hidden="true">↗</span></div>
           </div>
         </article>
+
+        <article class="project-card book-card" tabindex="0" data-status="released" data-zh-title="Like a Book" data-en-title="Like a Book" data-zh-description="解决已做完的TODOLISTS被丢进垃圾桶的痛点，这个软件把你做过的事情都留了下来，就像写一本书一样。软件发布在了Microsoft store，免费。是7天之内完成制作和发布流程的。" data-en-description="It keeps your completed TODOLISTS instead of throwing them away, preserving what you have done like writing a book. The software is free on the Microsoft Store, and its development and release were completed in seven days.">
+          <div class="project-visual" aria-hidden="true"><span class="book-shape"><i></i><i></i></span><b>05</b></div>
+          <div class="project-content">
+            <span class="status released" data-i18n="released">已发布</span>
+            <h3 class="decode-title"></h3>
+            <p class="decode-description"></p>
+          </div>
+        </article>
       </div>
       <p class="empty-state" hidden data-i18n="empty">这个阶段暂时没有作品。</p>
     </section>
@@ -121,20 +122,20 @@
     <section class="about-strip" id="about">
       <p class="strip-hand" data-i18n="stripHand">Still building, still curious.</p>
       <div>
-        <h2 data-i18n="aboutTitle">我来自语言与人文学科，<br>现在也用代码做东西。</h2>
-        <p data-i18n="aboutBody">我喜欢那些规模不大、但能让日常顺一点或有趣一点的想法。翻译教会我留意语境，做产品则让我把这种留意变成可以触碰的东西。</p>
+        <h2 data-i18n="aboutTitle">我来自语言与人文学科，<br>现在也用AI做东西。</h2>
+        <p data-i18n="aboutBody">我喜欢那些基于日常痛点出发或有趣的想法。翻译教会我保持开放包容,AI帮助我跨过技术门槛。</p>
       </div>
       <span class="little-star" aria-hidden="true">✦</span>
     </section>
   </main>
 
   <footer id="contact">
-    <div class="footer-mark"><span>z.</span><p data-i18n="footerLine">把小想法做成亮一点的日子。</p></div>
+    <div class="footer-mark"><span>z.</span></div>
     <div class="footer-contact">
       <p data-i18n="footerPrompt">想聊聊小项目，或只是交换一个有趣的想法：</p>
-      <a href="mailto:hello@example.com">hello@example.com</a>
+      <a href="mailto:1328657748@qq.com">1328657748@qq.com</a>
     </div>
-    <p class="copyright">© 2026 z. <span data-i18n="madeWith">在好奇心还没用完之前持续更新。</span></p>
+    <p class="copyright">© 2026 z.</p>
   </footer>
 
   <script src="app.js"></script>
