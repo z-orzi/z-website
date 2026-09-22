@@ -205,6 +205,21 @@ body{color:#1a1a1a;font-family:var(--sans);font-weight:400;line-height:1.6}.hero
 .desk-pencils{left:8%;bottom:14%;width:18%;height:27%;z-index:7}.desk-pencils>i{position:absolute;bottom:39%;width:11px;height:62%;border:3px solid #292929;background:var(--yellow)}.desk-pencils>i:nth-child(1){left:25%;transform:rotate(-11deg)}.desk-pencils>i:nth-child(2){left:48%;height:72%;background:#76a2b2}.desk-pencils>i:nth-child(3){left:69%;transform:rotate(12deg);background:#f4eee0}.desk-pencils>b{position:absolute;bottom:0;left:8%;width:82%;height:47%;background:#ec765d;border:5px solid #292929;border-radius:5px 5px 18px 18px}
 .desk-cat{right:3%;bottom:15%;width:29%;height:26%;z-index:8}.cat-body{position:absolute;left:16%;bottom:0;width:70%;height:64%;background:#e8a85c;border:5px solid #292929;border-radius:48%}.cat-head{position:absolute;left:21%;top:0;width:62%;aspect-ratio:1;display:grid;place-items:center;background:#e8a85c;border:5px solid #292929;border-radius:45%;font:700 12px var(--sans)}.cat-tail{position:absolute;right:0;bottom:17%;width:42%;height:55%;border:8px solid #292929;border-left-color:transparent;border-bottom-color:transparent;border-radius:50%;transform:rotate(23deg)}.desk-note{right:7%;top:16%;width:21%;aspect-ratio:1;display:grid;place-items:center;text-align:center;background:#ffda43;box-shadow:2px 4px 0 rgba(0,0,0,.12);transform:rotate(5deg);font:600 clamp(12px,1.4vw,18px)/1.1 var(--serif-hand)}
 @media(max-width:900px){.hero{grid-template-columns:1fr;padding-top:32px}.hero::before{width:55vw;height:55vw;min-width:300px;min-height:300px}.interactive-desk{width:min(100%,520px);height:560px;justify-self:center}.hero h1{font-size:clamp(3.4rem,13vw,6rem)}}@media(max-width:560px){.interactive-desk{height:440px;min-height:440px;border-radius:38px}.lamp-state{font-size:12px}.hero{padding-left:24px;padding-right:24px}.desk-tip{font-size:11px}}@media(prefers-reduced-motion:reduce){.desk-item,.interactive-desk,.light-beam{transition:none!important}.desk-item{transform:none!important}}
+/* ImageGen hero artwork + accessible interactive hotspots */
+.interactive-desk{height:min(78vh,700px);min-height:520px;border-radius:26px;background:#d7b37a;isolation:isolate}
+.desk-art{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center;transition:filter .28s ease-out,transform .28s ease-out}
+.interactive-desk::before{z-index:1;background:radial-gradient(circle at 30% 31%,rgba(255,210,69,.2),transparent 31%);pointer-events:none}
+.interactive-desk.lamp-off .desk-art{filter:brightness(.58) saturate(.72) contrast(1.04)}
+.interactive-desk.lamp-off::before{opacity:0}
+.lamp-state{left:5%;top:4%;padding:7px 10px;border-radius:999px;background:rgba(255,253,247,.9);color:#1a1a1a;box-shadow:0 2px 12px rgba(38,36,31,.12);backdrop-filter:blur(8px)}
+.desk-item{z-index:5;background:transparent;border-radius:18px}
+.desk-item::after{content:"";position:absolute;inset:4px;border:1.5px solid transparent;border-radius:inherit;transition:border-color .2s ease-out,background .2s ease-out}
+.desk-item:hover::after,.desk-item:focus-visible::after,.desk-item.is-active::after{border-color:rgba(255,255,255,.88);background:rgba(255,213,51,.08)}
+.desk-lamp{left:9%;top:11%;width:37%;height:38%}.desk-lamp button{z-index:2}
+.desk-computer{left:31%;top:35%;width:36%;height:29%}.desk-pencils{left:65%;bottom:34%;width:19%;height:28%}.desk-cat{right:0;bottom:26%;width:25%;height:24%}.desk-note{right:18%;top:25%;width:22%;height:15%;aspect-ratio:auto;box-shadow:none;transform:none;font-size:0}
+.shade,.arm,.base,.screen,.computer-base,.desk-pencils>i,.desk-pencils>b,.cat-body,.cat-head,.cat-tail,.desk-surface,.light-beam{display:none!important}
+@media(max-width:900px){.interactive-desk{height:min(78vh,650px)}}
+@media(max-width:560px){.interactive-desk{height:520px;min-height:520px;border-radius:22px}}
 </style>
 </head>
 <body>
@@ -234,12 +249,13 @@ body{color:#1a1a1a;font-family:var(--sans);font-weight:400;line-height:1.6}.hero
         <a class="explore-link" href="#projects"><span data-i18n="explore">去看作品</span><b aria-hidden="true">↓</b></a>
       </div>
       <figure class="workspace-figure interactive-desk" id="creative-desk" aria-label="可交互的创作桌面：移动鼠标探索，点击台灯切换光线">
-        <span class="lamp-state">灯已打开 · 点击台灯切换</span><div class="desk-surface"></div><div class="light-beam"></div>
-        <div class="desk-item desk-lamp" data-depth="8"><button type="button" aria-label="关闭台灯" aria-pressed="true"><i class="shade"></i><i class="arm"></i><i class="base"></i></button><span class="desk-tip">Bright Ideas</span></div>
-        <div class="desk-item desk-computer" data-depth="15" tabindex="0" role="button" aria-label="Web Development"><i class="screen"><b>&lt;ideas /&gt;</b></i><i class="computer-base"></i><span class="desk-tip">Web Development</span></div>
-        <div class="desk-item desk-pencils" data-depth="22" tabindex="0" role="button" aria-label="Illustration"><i></i><i></i><i></i><b></b><span class="desk-tip">Illustration</span></div>
-        <div class="desk-item desk-cat" data-depth="27" tabindex="0" role="button" aria-label="Cat Lover"><i class="cat-body"></i><i class="cat-head">• ᴗ •</i><i class="cat-tail"></i><span class="desk-tip">Cat Lover 🐾</span></div>
-        <div class="desk-item desk-note" data-depth="18" tabindex="0" role="button" aria-label="Product Thinking">make it<br>useful :)<span class="desk-tip">Product Thinking</span></div>
+        <img class="desk-art" src="assets/creative-desk-imagegen.png" alt="温暖阳光下的创作桌面，摆着电脑、台灯、画笔、陶瓷鱼和一只睡着的橘猫" width="1120" height="1400" fetchpriority="high" decoding="async">
+        <span class="lamp-state">灯已打开 · 点击台灯切换</span>
+        <div class="desk-item desk-lamp" data-depth="8"><button type="button" aria-label="关闭台灯" aria-pressed="true"></button><span class="desk-tip">Bright Ideas</span></div>
+        <div class="desk-item desk-computer" data-depth="15" tabindex="0" role="button" aria-label="Web Development"><span class="desk-tip">Web Development</span></div>
+        <div class="desk-item desk-pencils" data-depth="22" tabindex="0" role="button" aria-label="Illustration"><span class="desk-tip">Illustration</span></div>
+        <div class="desk-item desk-cat" data-depth="27" tabindex="0" role="button" aria-label="Cat Lover"><span class="desk-tip">Cat Lover 🐾</span></div>
+        <div class="desk-item desk-note" data-depth="18" tabindex="0" role="button" aria-label="Product Thinking"><span class="desk-tip">Product Thinking</span></div>
       </figure>
     </section>
 
