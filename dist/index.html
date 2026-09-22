@@ -226,6 +226,8 @@ body{font-size:16px;line-height:1.65;text-rendering:optimizeLegibility;-webkit-f
 h1,.section-heading h2,.strip-hand,.footer-contact a,.decode-hint,.scribble,.punctuation{font-family:var(--sans);font-style:normal;transform:none;letter-spacing:-.02em}
 .strip-hand{font-weight:700;line-height:1.08}.footer-contact a{font-weight:600;letter-spacing:-.025em}.decode-hint{font-size:1rem;line-height:1.6;max-width:320px}.project-card h3{font-weight:700;line-height:1.35}.decode-title,.decode-description,.project-card.is-decoded .decode-title,.project-card.is-decoded .decode-description{font-family:var(--sans)}
 .decode-description{font-size:1rem;line-height:1.65;color:#555}.project-card h3{min-height:0}.decode-description{min-height:0}.currently li,.about-strip p,.footer-contact p{font-size:max(1rem,16px);line-height:1.65}.status,.filter,.card-foot li{font-size:14px}.maker-note{line-height:1.45}.language-toggle{font-size:14px}.desk-tip{font-family:var(--sans)}
+.project-card.is-decoding .decode-title,.project-card.is-decoding .decode-description{color:var(--blue)}
+.project-card.is-decoding .project-visual{filter:saturate(1.08) brightness(1.03)}
 </style>
 </head>
 <body>
@@ -395,6 +397,8 @@ const translations = {
 };
 
 const cards = [...document.querySelectorAll(".project-card")];
+const decodePool = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789※◇△＋";
+const decodeTimers = new WeakMap();
 let language = localStorage.getItem("z-language") || (navigator.language.startsWith("zh") ? "zh" : "en");
 function renderCards() {
   cards.forEach((card) => {
@@ -405,6 +409,39 @@ function renderCards() {
     card.classList.add("is-decoded");
   });
 }
+
+function playDecode(card) {
+  if (matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+  clearInterval(decodeTimers.get(card));
+  const title = card.querySelector(".decode-title");
+  const description = card.querySelector(".decode-description");
+  const finalTitle = card.dataset[`${language}Title`];
+  const finalDescription = card.dataset[`${language}Description`];
+  let frame = 0;
+  card.classList.add("is-decoding");
+  const scramble = (text, settled) => [...text].map((char, index) => {
+    if (/\s|[，。！？、,.!?'’:\-]/.test(char) || index < settled) return char;
+    return decodePool[(index * 7 + frame * 5) % decodePool.length];
+  }).join("");
+  const timer = setInterval(() => {
+    const progress = Math.min(1, frame / 14);
+    title.textContent = scramble(finalTitle, Math.floor(finalTitle.length * progress));
+    description.textContent = scramble(finalDescription, Math.floor(finalDescription.length * progress));
+    frame += 1;
+    if (progress >= 1) {
+      clearInterval(timer);
+      title.textContent = finalTitle;
+      description.textContent = finalDescription;
+      card.classList.remove("is-decoding");
+    }
+  }, 28);
+  decodeTimers.set(card, timer);
+}
+
+cards.forEach((card) => {
+  card.addEventListener("pointerenter", () => playDecode(card));
+  card.addEventListener("focus", () => playDecode(card));
+});
 
 function setLanguage(next) {
   language = next;
