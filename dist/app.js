@@ -105,7 +105,8 @@ function setLanguage(next) {
   localStorage.setItem("z-language", language);
   document.documentElement.lang = language === "zh" ? "zh-CN" : "en";
   document.querySelectorAll("[data-i18n]").forEach((element) => {
-    element.innerHTML = translations[language][element.dataset.i18n];
+    const copy = translations[language][element.dataset.i18n];
+    if (typeof copy === "string") element.innerHTML = copy;
   });
   document.querySelectorAll(".language-toggle span").forEach((span) => span.classList.remove("lang-active"));
   document.querySelector(`.language-toggle span:${language === "zh" ? "first-child" : "last-child"}`).classList.add("lang-active");

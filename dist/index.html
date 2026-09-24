@@ -37,6 +37,10 @@ button { color: inherit; }
 .skip-link:focus { transform: translateY(0); }
 :focus-visible { outline: 3px solid var(--blue); outline-offset: 4px; }
 
+.focus-banner { min-height: 38px; padding: 7px 24px; display: flex; align-items: center; justify-content: center; gap: 12px; background: var(--yellow); border-bottom: 1.5px solid var(--ink); }
+.focus-banner p { margin: 0; font-family: var(--sans); font-size: 1rem; font-weight: 600; line-height: 1.4; }
+.focus-banner span { color: var(--blue); font-size: .78rem; }
+
 .site-header { max-width: 1380px; margin: 0 auto; height: 92px; padding: 0 42px; display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; position: relative; z-index: 20; }
 .brand { width: 52px; height: 44px; text-decoration: none; display: grid; place-items: center; justify-self: start; position: relative; }
 .brand::before { content: ""; position: absolute; inset: 1px -1px -1px 1px; background: var(--yellow); border-radius: 48% 42% 51% 39%; transform: rotate(-5deg); border: 1.5px solid var(--ink); }
@@ -376,6 +380,7 @@ h1,.section-heading h2,.strip-hand,.footer-contact a,.decode-hint,.scribble,.pun
 const translations = {
   zh: {
     skip: "跳到作品", navHome: "首页", navProjects: "作品", navAbout: "关于", contact: "联系我",
+    focusBanner: "关注 AI 和游戏。",
     heroTitle: "Ideas to realities.",
     heroBody: "我来自人文社科，但也不畏惧技术。AI 是帮助我实现想法的工具。",
     explore: "去看作品",
@@ -389,6 +394,7 @@ const translations = {
   },
   en: {
     skip: "Skip to projects", navHome: "Home", navProjects: "Projects", navAbout: "About", contact: "Get in touch",
+    focusBanner: "Exploring AI and games.",
     heroTitle: "Ideas to realities.",
     heroBody: "My background is in the humanities, but technology does not intimidate me. I use AI to turn ideas into working products.",
     explore: "Explore my work",
@@ -454,7 +460,8 @@ function setLanguage(next) {
   localStorage.setItem("z-language", language);
   document.documentElement.lang = language === "zh" ? "zh-CN" : "en";
   document.querySelectorAll("[data-i18n]").forEach((element) => {
-    element.innerHTML = translations[language][element.dataset.i18n];
+    const copy = translations[language][element.dataset.i18n];
+    if (typeof copy === "string") element.innerHTML = copy;
   });
   document.querySelectorAll(".language-toggle span").forEach((span) => span.classList.remove("lang-active"));
   document.querySelector(`.language-toggle span:${language === "zh" ? "first-child" : "last-child"}`).classList.add("lang-active");
