@@ -1,6 +1,7 @@
 const translations = {
   zh: {
     skip: "跳到作品", navHome: "首页", navProjects: "作品", navAbout: "关于", contact: "联系我",
+    focusBanner: "关注 AI 和游戏。",
     heroTitle: "Ideas to realities.",
     heroBody: "我来自人文社科,但也不畏惧技术。AI是帮助我实现想法的工具。",
     explore: "去看作品",
@@ -14,6 +15,7 @@ const translations = {
   },
   en: {
     skip: "Skip to projects", navHome: "Home", navProjects: "Projects", navAbout: "About", contact: "Get in touch",
+    focusBanner: "Exploring AI and games.",
     heroTitle: "Ideas to realities.",
     heroBody: "Trained in the humanities, unafraid of tech. I use AI as a tool to make my ideas real.",
     explore: "Explore my work",
